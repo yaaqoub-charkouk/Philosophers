@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/13 11:48:15 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/16 10:37:26 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,14 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include "utils/utils.h"
+
+#define THINKING 0
+#define EATING 1
+#define SLEEPING 2 
 
 typedef pthread_mutex_t mutex_t;
+typedef struct s_data t_data;
 
 typedef struct s_philo
 {
@@ -29,15 +35,23 @@ typedef struct s_philo
 	mutex_t		*left_fork;
 	mutex_t		*right_fork;
 	pthread_t	thread;
+	t_data		*data; // each philo should have access to global data
 }	t_philo;
 
 typedef struct s_data
 {
-	int	num_of_philos;
-	int	time_to_die;
-	int	time_to_eat;
-	int	time_to_sleep;
-	int	max_eating_count_p;
+	int		num_of_philos;
+	int		time_to_die;
+	int		time_to_eat;
+	int		time_to_sleep;
+	int		max_eating_count_p; // optional 
+	mutex_t	*forks;
 }	t_data;
+
+void	init_data_struct(t_data *data, char **av);
+int		init_philo_struct(t_philo *philosophers, t_data *data);
+void	ft_free(t_data *data, t_philo **philo, int i);
+void	*routine(void *param);
+void	free_and_destroy(t_data *data, t_philo **philo);
 
 #endif
