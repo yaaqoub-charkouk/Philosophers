@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/16 10:37:26 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:42:12 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_data t_data;
 typedef struct s_philo
 {
 	int			id;
-	int			last_time_eats;
+	size_t		last_time_eats;
 	int 		num_times_eats;	
 	mutex_t		*left_fork;
 	mutex_t		*right_fork;
@@ -46,12 +46,22 @@ typedef struct s_data
 	int		time_to_sleep;
 	int		max_eating_count_p; // optional 
 	mutex_t	*forks;
+	size_t	zero_time;
+	int		is_died;
 }	t_data;
 
-void	init_data_struct(t_data *data, char **av);
+int		init_data_struct(t_data *data, char **av);
 int		init_philo_struct(t_philo *philosophers, t_data *data);
 void	ft_free(t_data *data, t_philo **philo, int i);
 void	*routine(void *param);
 void	free_and_destroy(t_data *data, t_philo **philo);
+
+size_t	get_current_time(t_data *data);
+size_t	get_zero_time(void);
+
+// actions
+void	eat(t_philo *philo);
+void	sleep(t_philo *philo);
+void	think(t_philo *philo);
 
 #endif

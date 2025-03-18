@@ -14,11 +14,12 @@ int	main(int ac, char **av)
 
 	if (ac == 4 || ac == 5)
 	{
-		init_data_struct(&data, av);
+		if (!init_data_struct(&data, av))
+			return (1);
 		philosophers = malloc(data.num_of_philos * sizeof(t_philo));
 		if (!philosophers)
 			return(1);
-		init_philo_struct(philosophers, data);
+		init_philo_struct(philosophers, &data);
 	}
 	else
 		printf("Error\n");

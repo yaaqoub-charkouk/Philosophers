@@ -1,15 +1,19 @@
 #include "philo.h"
 
-void	init_data_struct(t_data *data, char **av)
+int	init_data_struct(t_data *data, char **av)
 {
 	data->num_of_philos = ft_atoi(av[1]);
 	data->time_to_die = ft_atoi(av[2]);
 	data->time_to_eat = ft_atoi(av[3]);
 	data->time_to_sleep = ft_atoi(av[4]);
+	data->zero_time = get_zero_time(); // to get the initial time;
+	if (data->zero_time == 0)
+		return (0);// failed to get time !!!!!!!!!!!! get time of the day
 	if (av[5] != NULL)
 		data->max_eating_count_p = ft_atoi(av[5]);
 	else
 		data->max_eating_count_p = -1;
+	return (1);
 }
 
 int	join_threads(t_philo *philosophers, t_data *data)
@@ -22,7 +26,7 @@ int	join_threads(t_philo *philosophers, t_data *data)
 		if (pthread_join(philosophers[i].thread, NULL))
 		{
 			write(2, "pthread_join failed .", 21);
-			ft_free(data, &philosophers); // should i destroy mutex ??
+			ft_free(data, &philosophers, i); // should i destroy mutex ??
 			return (0);
 		}
 		i++;
