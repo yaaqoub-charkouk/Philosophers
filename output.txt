@@ -1,0 +1,1226 @@
+0 1 has taken a fork
+0 1 has taken a fork
+0 4 has taken a fork
+0 2 has taken a fork
+0 2 has taken a fork
+0 1 is eating
+0 2 is eating
+0 4 has taken a fork
+0 5 has taken a fork
+1 5 has taken a fork
+1 5 is eating
+0 3 has taken a fork
+1 3 has taken a fork
+1 3 is eating
+1 4 is eating
+1 7 has taken a fork
+1 7 has taken a fork
+1 7 is eating
+1 8 has taken a fork
+1 8 has taken a fork
+1 8 is eating
+1 9 has taken a fork
+1 10 has taken a fork
+1 10 has taken a fork
+1 10 is eating
+1 11 has taken a fork
+1 11 has taken a fork
+1 11 is eating
+1 12 has taken a fork
+1 12 has taken a fork
+1 12 is eating
+1 13 has taken a fork
+1 13 has taken a fork
+1 13 is eating
+1 14 has taken a fork
+1 14 has taken a fork
+1 14 is eating
+1 15 has taken a fork
+1 15 has taken a fork
+1 15 is eating
+1 16 has taken a fork
+1 16 has taken a fork
+1 16 is eating
+1 17 has taken a fork
+1 17 has taken a fork
+1 17 is eating
+1 18 has taken a fork
+1 18 has taken a fork
+1 18 is eating
+1 19 has taken a fork
+1 19 has taken a fork
+1 19 is eating
+1 20 has taken a fork
+1 20 has taken a fork
+1 20 is eating
+1 21 has taken a fork
+1 21 has taken a fork
+1 21 is eating
+1 22 has taken a fork
+1 22 has taken a fork
+1 22 is eating
+1 23 has taken a fork
+1 23 has taken a fork
+1 23 is eating
+1 24 has taken a fork
+1 24 has taken a fork
+1 24 is eating
+1 25 has taken a fork
+1 25 has taken a fork
+1 25 is eating
+1 26 has taken a fork
+1 26 has taken a fork
+1 26 is eating
+1 27 has taken a fork
+1 27 has taken a fork
+1 27 is eating
+1 28 has taken a fork
+1 28 has taken a fork
+1 28 is eating
+1 29 has taken a fork
+1 29 has taken a fork
+1 29 is eating
+1 30 has taken a fork
+1 30 has taken a fork
+1 30 is eating
+1 31 has taken a fork
+1 31 has taken a fork
+1 31 is eating
+1 32 has taken a fork
+1 32 has taken a fork
+1 32 is eating
+1 33 has taken a fork
+1 33 has taken a fork
+1 33 is eating
+1 34 has taken a fork
+1 34 has taken a fork
+1 34 is eating
+1 35 has taken a fork
+1 35 has taken a fork
+1 35 is eating
+1 36 has taken a fork
+1 36 has taken a fork
+1 36 is eating
+1 37 has taken a fork
+1 37 has taken a fork
+1 37 is eating
+1 38 has taken a fork
+1 38 has taken a fork
+1 38 is eating
+1 39 has taken a fork
+1 39 has taken a fork
+1 39 is eating
+1 40 has taken a fork
+1 40 has taken a fork
+1 40 is eating
+1 41 has taken a fork
+1 41 has taken a fork
+1 41 is eating
+1 42 has taken a fork
+1 42 has taken a fork
+1 42 is eating
+1 43 has taken a fork
+1 43 has taken a fork
+1 43 is eating
+1 44 has taken a fork
+1 44 has taken a fork
+1 44 is eating
+1 45 has taken a fork
+1 46 has taken a fork
+1 46 has taken a fork
+1 46 is eating
+1 47 has taken a fork
+1 47 has taken a fork
+1 47 is eating
+1 48 has taken a fork
+1 48 has taken a fork
+1 48 is eating
+1 49 has taken a fork
+1 49 has taken a fork
+1 49 is eating
+1 50 has taken a fork
+1 50 has taken a fork
+1 50 is eating
+1 51 has taken a fork
+1 51 has taken a fork
+1 51 is eating
+1 52 has taken a fork
+1 52 has taken a fork
+1 52 is eating
+1 53 has taken a fork
+1 53 has taken a fork
+1 53 is eating
+1 54 has taken a fork
+1 54 has taken a fork
+1 54 is eating
+1 55 has taken a fork
+1 55 has taken a fork
+1 55 is eating
+1 56 has taken a fork
+1 56 has taken a fork
+1 56 is eating
+1 57 has taken a fork
+1 57 has taken a fork
+1 57 is eating
+1 58 has taken a fork
+1 58 has taken a fork
+1 58 is eating
+1 59 has taken a fork
+1 60 has taken a fork
+1 60 has taken a fork
+1 60 is eating
+1 61 has taken a fork
+1 61 has taken a fork
+1 61 is eating
+1 63 has taken a fork
+1 63 has taken a fork
+1 63 is eating
+1 64 has taken a fork
+1 64 has taken a fork
+1 64 is eating
+1 65 has taken a fork
+1 65 has taken a fork
+1 65 is eating
+1 66 has taken a fork
+1 66 has taken a fork
+1 66 is eating
+1 67 has taken a fork
+1 67 has taken a fork
+1 67 is eating
+1 68 has taken a fork
+1 68 has taken a fork
+1 68 is eating
+1 69 has taken a fork
+1 69 has taken a fork
+1 69 is eating
+1 70 has taken a fork
+1 70 has taken a fork
+1 70 is eating
+1 71 has taken a fork
+1 71 has taken a fork
+1 71 is eating
+1 72 has taken a fork
+1 72 has taken a fork
+1 72 is eating
+1 73 has taken a fork
+1 73 has taken a fork
+1 73 is eating
+1 74 has taken a fork
+1 74 has taken a fork
+1 74 is eating
+1 77 has taken a fork
+1 77 has taken a fork
+1 77 is eating
+1 75 has taken a fork
+1 75 has taken a fork
+1 75 is eating
+1 76 has taken a fork
+1 78 has taken a fork
+1 78 has taken a fork
+1 78 is eating
+1 79 has taken a fork
+1 79 has taken a fork
+1 79 is eating
+1 80 has taken a fork
+1 80 has taken a fork
+1 80 is eating
+1 81 has taken a fork
+1 81 has taken a fork
+1 81 is eating
+1 82 has taken a fork
+1 82 has taken a fork
+1 82 is eating
+1 83 has taken a fork
+1 83 has taken a fork
+1 83 is eating
+1 84 has taken a fork
+1 84 has taken a fork
+1 84 is eating
+1 85 has taken a fork
+1 85 has taken a fork
+1 85 is eating
+1 86 has taken a fork
+1 86 has taken a fork
+1 86 is eating
+1 87 has taken a fork
+1 88 has taken a fork
+1 88 has taken a fork
+1 88 is eating
+1 89 has taken a fork
+1 89 has taken a fork
+1 89 is eating
+1 90 has taken a fork
+1 90 has taken a fork
+1 90 is eating
+1 91 has taken a fork
+1 91 has taken a fork
+1 91 is eating
+1 92 has taken a fork
+1 92 has taken a fork
+1 92 is eating
+1 93 has taken a fork
+1 93 has taken a fork
+1 93 is eating
+1 94 has taken a fork
+1 94 has taken a fork
+1 94 is eating
+1 95 has taken a fork
+1 95 has taken a fork
+1 95 is eating
+1 96 has taken a fork
+1 96 has taken a fork
+1 96 is eating
+1 97 has taken a fork
+1 98 has taken a fork
+1 98 has taken a fork
+1 98 is eating
+1 99 has taken a fork
+1 99 has taken a fork
+1 99 is eating
+1 100 has taken a fork
+1 100 has taken a fork
+1 100 is eating
+1 101 has taken a fork
+1 101 has taken a fork
+1 101 is eating
+1 102 has taken a fork
+1 102 has taken a fork
+1 102 is eating
+1 103 has taken a fork
+1 103 has taken a fork
+1 103 is eating
+1 104 has taken a fork
+1 104 has taken a fork
+1 104 is eating
+1 105 has taken a fork
+1 105 has taken a fork
+1 105 is eating
+1 106 has taken a fork
+1 106 has taken a fork
+1 106 is eating
+1 107 has taken a fork
+1 107 has taken a fork
+1 107 is eating
+1 108 has taken a fork
+1 108 has taken a fork
+1 108 is eating
+1 109 has taken a fork
+1 109 has taken a fork
+1 109 is eating
+1 110 has taken a fork
+1 110 has taken a fork
+1 110 is eating
+1 111 has taken a fork
+1 112 has taken a fork
+1 112 has taken a fork
+1 112 is eating
+1 113 has taken a fork
+1 113 has taken a fork
+1 113 is eating
+2 115 has taken a fork
+2 115 has taken a fork
+2 115 is eating
+2 117 has taken a fork
+2 117 has taken a fork
+2 117 is eating
+2 116 has taken a fork
+2 118 has taken a fork
+2 118 has taken a fork
+2 118 is eating
+2 119 has taken a fork
+2 119 has taken a fork
+2 119 is eating
+2 121 has taken a fork
+2 121 has taken a fork
+2 121 is eating
+2 122 has taken a fork
+2 122 has taken a fork
+2 122 is eating
+2 124 has taken a fork
+2 124 has taken a fork
+2 124 is eating
+2 120 has taken a fork
+2 120 has taken a fork
+2 120 is eating
+2 123 has taken a fork
+2 123 has taken a fork
+2 123 is eating
+2 125 has taken a fork
+2 125 has taken a fork
+2 125 is eating
+2 127 has taken a fork
+2 127 has taken a fork
+2 127 is eating
+2 128 has taken a fork
+2 128 has taken a fork
+2 128 is eating
+2 129 has taken a fork
+2 129 has taken a fork
+2 129 is eating
+2 130 has taken a fork
+2 130 has taken a fork
+2 130 is eating
+2 131 has taken a fork
+2 131 has taken a fork
+2 131 is eating
+2 133 has taken a fork
+2 133 has taken a fork
+2 133 is eating
+2 135 has taken a fork
+2 135 has taken a fork
+2 135 is eating
+2 136 has taken a fork
+2 136 has taken a fork
+2 136 is eating
+2 137 has taken a fork
+2 137 has taken a fork
+2 137 is eating
+2 138 has taken a fork
+2 138 has taken a fork
+2 138 is eating
+2 140 has taken a fork
+2 140 has taken a fork
+2 140 is eating
+2 141 has taken a fork
+2 141 has taken a fork
+2 141 is eating
+2 143 has taken a fork
+2 143 has taken a fork
+2 143 is eating
+2 142 has taken a fork
+2 144 has taken a fork
+2 144 has taken a fork
+2 144 is eating
+2 145 has taken a fork
+2 146 has taken a fork
+2 146 has taken a fork
+2 146 is eating
+2 147 has taken a fork
+2 149 has taken a fork
+2 149 has taken a fork
+2 149 is eating
+2 151 has taken a fork
+2 151 has taken a fork
+2 151 is eating
+2 148 has taken a fork
+2 148 has taken a fork
+2 154 has taken a fork
+2 152 has taken a fork
+2 154 has taken a fork
+2 154 is eating
+2 156 has taken a fork
+2 156 has taken a fork
+2 156 is eating
+2 152 has taken a fork
+2 152 is eating
+2 148 is eating
+2 157 has taken a fork
+2 157 has taken a fork
+2 157 is eating
+2 158 has taken a fork
+2 158 has taken a fork
+2 158 is eating
+2 153 has taken a fork
+2 155 has taken a fork
+2 155 has taken a fork
+2 155 is eating
+2 153 has taken a fork
+2 153 is eating
+2 161 has taken a fork
+2 159 has taken a fork
+2 159 has taken a fork
+2 159 is eating
+2 161 has taken a fork
+2 161 is eating
+2 163 has taken a fork
+2 163 has taken a fork
+2 163 is eating
+2 160 has taken a fork
+2 160 has taken a fork
+2 160 is eating
+2 165 has taken a fork
+2 165 has taken a fork
+2 165 is eating
+2 167 has taken a fork
+2 167 has taken a fork
+2 167 is eating
+2 169 has taken a fork
+2 169 has taken a fork
+2 169 is eating
+2 170 has taken a fork
+2 170 has taken a fork
+2 170 is eating
+2 171 has taken a fork
+2 171 has taken a fork
+2 171 is eating
+2 172 has taken a fork
+2 172 has taken a fork
+2 172 is eating
+2 173 has taken a fork
+2 174 has taken a fork
+2 174 has taken a fork
+2 174 is eating
+2 175 has taken a fork
+2 175 has taken a fork
+2 175 is eating
+2 177 has taken a fork
+2 177 has taken a fork
+2 177 is eating
+2 178 has taken a fork
+2 178 has taken a fork
+2 178 is eating
+2 179 has taken a fork
+2 181 has taken a fork
+2 181 has taken a fork
+2 181 is eating
+2 180 has taken a fork
+2 182 has taken a fork
+2 182 has taken a fork
+2 182 is eating
+2 183 has taken a fork
+2 185 has taken a fork
+3 188 has taken a fork
+3 188 has taken a fork
+2 187 has taken a fork
+3 185 has taken a fork
+3 185 is eating
+3 187 has taken a fork
+3 187 is eating
+3 189 has taken a fork
+3 189 has taken a fork
+3 189 is eating
+3 190 has taken a fork
+3 190 has taken a fork
+3 190 is eating
+3 191 has taken a fork
+3 191 has taken a fork
+3 191 is eating
+3 188 is eating
+3 194 has taken a fork
+3 194 has taken a fork
+3 194 is eating
+3 192 has taken a fork
+3 192 has taken a fork
+3 192 is eating
+3 195 has taken a fork
+3 195 has taken a fork
+3 195 is eating
+3 197 has taken a fork
+3 197 has taken a fork
+3 197 is eating
+3 196 has taken a fork
+3 198 has taken a fork
+3 198 has taken a fork
+3 198 is eating
+3 199 has taken a fork
+3 199 has taken a fork
+3 199 is eating
+20 1 is sleeping
+20 2 is sleeping
+21 17 is sleeping
+21 113 is sleeping
+21 65 is sleeping
+21 102 is sleeping
+21 53 is sleeping
+21 38 is sleeping
+21 61 is sleeping
+21 12 is sleeping
+21 30 is sleeping
+21 33 is sleeping
+21 58 is sleeping
+21 112 is sleeping
+21 27 is sleeping
+21 90 is sleeping
+21 107 is sleeping
+21 52 is sleeping
+21 47 is sleeping
+21 22 is sleeping
+21 13 is sleeping
+21 80 is sleeping
+21 35 is sleeping
+21 88 is sleeping
+21 106 is sleeping
+21 24 is sleeping
+21 31 is sleeping
+21 108 is sleeping
+21 54 is sleeping
+21 10 is sleeping
+21 60 is sleeping
+21 98 is sleeping
+21 34 is sleeping
+21 101 is sleeping
+21 92 is sleeping
+21 46 is sleeping
+21 84 is sleeping
+21 100 is sleeping
+21 72 is sleeping
+21 77 is sleeping
+21 36 is sleeping
+21 14 is sleeping
+21 109 is sleeping
+21 66 is sleeping
+21 105 is sleeping
+21 48 is sleeping
+21 44 is sleeping
+21 43 is sleeping
+21 74 is sleeping
+21 26 is sleeping
+21 91 is sleeping
+21 75 is sleeping
+21 16 is sleeping
+21 11 is sleeping
+21 83 is sleeping
+21 23 is sleeping
+21 68 is sleeping
+21 19 is sleeping
+21 50 is sleeping
+21 5 is sleeping
+21 85 is sleeping
+21 94 is sleeping
+21 41 is sleeping
+21 99 is sleeping
+21 28 is sleeping
+21 3 is sleeping
+21 25 is sleeping
+21 20 is sleeping
+21 51 is sleeping
+21 15 is sleeping
+21 57 is sleeping
+21 4 is sleeping
+21 55 is sleeping
+21 49 is sleeping
+21 64 is sleeping
+21 29 is sleeping
+21 21 is sleeping
+21 78 is sleeping
+21 95 is sleeping
+21 18 is sleeping
+21 7 is sleeping
+21 63 is sleeping
+21 103 is sleeping
+21 81 is sleeping
+21 82 is sleeping
+21 70 is sleeping
+21 67 is sleeping
+21 89 is sleeping
+21 8 is sleeping
+21 42 is sleeping
+21 73 is sleeping
+21 96 is sleeping
+21 69 is sleeping
+21 104 is sleeping
+21 93 is sleeping
+21 56 is sleeping
+21 110 is sleeping
+21 37 is sleeping
+21 79 is sleeping
+21 40 is sleeping
+21 86 is sleeping
+21 71 is sleeping
+21 32 is sleeping
+21 39 is sleeping
+22 135 is sleeping
+22 160 is sleeping
+22 127 is sleeping
+22 144 is sleeping
+22 161 is sleeping
+22 141 is sleeping
+22 157 is sleeping
+22 117 is sleeping
+22 154 is sleeping
+22 165 is sleeping
+22 152 is sleeping
+22 128 is sleeping
+22 182 is sleeping
+22 136 is sleeping
+22 174 is sleeping
+22 148 is sleeping
+22 121 is sleeping
+22 163 is sleeping
+22 120 is sleeping
+22 170 is sleeping
+22 153 is sleeping
+22 138 is sleeping
+22 181 is sleeping
+22 124 is sleeping
+22 151 is sleeping
+22 133 is sleeping
+22 159 is sleeping
+22 149 is sleeping
+22 131 is sleeping
+22 115 is sleeping
+22 129 is sleeping
+22 178 is sleeping
+22 169 is sleeping
+22 140 is sleeping
+22 137 is sleeping
+22 130 is sleeping
+22 122 is sleeping
+22 156 is sleeping
+22 155 is sleeping
+22 172 is sleeping
+22 175 is sleeping
+22 171 is sleeping
+22 125 is sleeping
+22 167 is sleeping
+22 118 is sleeping
+22 158 is sleeping
+22 177 is sleeping
+22 146 is sleeping
+22 143 is sleeping
+22 119 is sleeping
+22 123 is sleeping
+23 185 is sleeping
+23 189 is sleeping
+23 190 is sleeping
+23 198 is sleeping
+23 197 is sleeping
+23 194 is sleeping
+23 187 is sleeping
+23 192 is sleeping
+23 191 is sleeping
+23 199 is sleeping
+23 188 is sleeping
+23 195 is sleeping
+23 200 has taken a fork
+23 200 has taken a fork
+23 200 is eating
+40 1 is thinking
+40 1 has taken a fork
+40 2 is thinking
+41 68 is thinking
+41 68 has taken a fork
+41 68 has taken a fork
+41 68 is eating
+41 56 is thinking
+41 36 is thinking
+41 53 is thinking
+41 26 is thinking
+41 63 is thinking
+41 102 is thinking
+41 49 is thinking
+41 101 is thinking
+41 26 has taken a fork
+41 86 is thinking
+41 63 has taken a fork
+41 53 has taken a fork
+41 63 has taken a fork
+41 26 has taken a fork
+41 86 has taken a fork
+41 53 has taken a fork
+41 48 is thinking
+41 53 is eating
+41 48 has taken a fork
+41 48 has taken a fork
+41 49 has taken a fork
+41 102 has taken a fork
+41 60 is thinking
+41 11 is thinking
+41 63 is eating
+41 7 is thinking
+41 102 has taken a fork
+41 104 is thinking
+41 104 has taken a fork
+41 7 has taken a fork
+41 11 has taken a fork
+41 88 is thinking
+41 31 is thinking
+41 71 is thinking
+41 51 is thinking
+41 51 has taken a fork
+41 51 has taken a fork
+41 51 is eating
+41 7 has taken a fork
+41 20 is thinking
+41 60 has taken a fork
+41 40 is thinking
+41 7 is eating
+41 40 has taken a fork
+41 47 is thinking
+41 88 has taken a fork
+41 84 is thinking
+41 73 is thinking
+41 88 has taken a fork
+41 88 is eating
+41 90 is thinking
+41 90 has taken a fork
+41 57 is thinking
+41 106 is thinking
+41 90 has taken a fork
+41 57 has taken a fork
+41 73 has taken a fork
+41 82 is thinking
+41 20 has taken a fork
+41 80 is thinking
+41 20 has taken a fork
+41 17 is thinking
+41 109 is thinking
+41 109 has taken a fork
+41 73 has taken a fork
+41 73 is eating
+41 108 is thinking
+41 90 is eating
+41 109 has taken a fork
+41 80 has taken a fork
+41 17 has taken a fork
+41 57 has taken a fork
+41 39 is thinking
+41 57 is eating
+41 14 is thinking
+41 110 is thinking
+41 74 is thinking
+41 81 is thinking
+41 89 is thinking
+41 21 is thinking
+41 13 is thinking
+41 14 has taken a fork
+41 14 has taken a fork
+41 14 is eating
+41 17 has taken a fork
+41 17 is eating
+41 83 is thinking
+41 50 is thinking
+41 35 is thinking
+41 24 is thinking
+41 28 is thinking
+41 99 is thinking
+41 42 is thinking
+41 19 is thinking
+41 38 is thinking
+41 42 has taken a fork
+41 21 has taken a fork
+41 92 is thinking
+41 42 has taken a fork
+41 58 is thinking
+41 113 is thinking
+41 52 is thinking
+41 64 is thinking
+41 54 is thinking
+41 41 is thinking
+41 100 is thinking
+41 42 is eating
+41 92 has taken a fork
+41 92 has taken a fork
+41 92 is eating
+41 38 has taken a fork
+41 75 is thinking
+41 75 has taken a fork
+41 30 is thinking
+41 77 is thinking
+41 95 is thinking
+41 18 is thinking
+41 75 has taken a fork
+41 36 has taken a fork
+41 77 has taken a fork
+41 36 has taken a fork
+41 48 is eating
+41 95 has taken a fork
+41 96 is thinking
+41 95 has taken a fork
+41 95 is eating
+41 26 is eating
+41 104 has taken a fork
+41 36 is eating
+41 37 is thinking
+41 86 has taken a fork
+41 8 is thinking
+41 11 has taken a fork
+41 27 is thinking
+41 11 is eating
+41 71 has taken a fork
+41 99 has taken a fork
+41 103 is thinking
+41 24 has taken a fork
+41 71 has taken a fork
+41 12 is thinking
+41 55 is thinking
+41 71 is eating
+41 98 is thinking
+41 98 has taken a fork
+41 107 is thinking
+41 113 has taken a fork
+41 4 is thinking
+41 38 has taken a fork
+41 94 is thinking
+41 91 is thinking
+41 4 has taken a fork
+41 38 is eating
+41 25 is thinking
+41 113 has taken a fork
+41 23 is thinking
+41 94 has taken a fork
+41 4 has taken a fork
+41 113 is eating
+41 4 is eating
+41 67 is thinking
+41 75 is eating
+41 85 is thinking
+41 10 is thinking
+41 29 is thinking
+41 31 has taken a fork
+41 56 has taken a fork
+41 30 has taken a fork
+41 31 has taken a fork
+41 31 is eating
+41 93 is thinking
+41 46 is thinking
+41 72 is thinking
+41 46 has taken a fork
+41 65 is thinking
+41 104 is eating
+41 86 is eating
+41 43 is thinking
+41 78 is thinking
+41 20 is eating
+41 32 is thinking
+41 79 is thinking
+41 60 has taken a fork
+41 66 is thinking
+41 70 is thinking
+41 70 has taken a fork
+41 108 has taken a fork
+41 60 is eating
+41 80 has taken a fork
+41 80 is eating
+41 109 is eating
+41 43 has taken a fork
+41 28 has taken a fork
+41 28 has taken a fork
+41 28 is eating
+41 82 has taken a fork
+41 82 has taken a fork
+41 112 is thinking
+41 10 has taken a fork
+41 82 is eating
+41 33 is thinking
+41 112 has taken a fork
+41 34 is thinking
+41 102 is eating
+41 33 has taken a fork
+41 46 has taken a fork
+41 61 is thinking
+41 3 is thinking
+41 65 has taken a fork
+41 84 has taken a fork
+41 5 is thinking
+41 61 has taken a fork
+41 99 has taken a fork
+41 46 is eating
+41 99 is eating
+41 16 is thinking
+41 84 has taken a fork
+41 105 is thinking
+41 16 has taken a fork
+41 106 has taken a fork
+41 106 has taken a fork
+41 106 is eating
+41 5 has taken a fork
+41 40 has taken a fork
+41 40 is eating
+41 84 is eating
+41 33 has taken a fork
+41 44 is thinking
+41 69 is thinking
+41 24 has taken a fork
+41 15 is thinking
+41 77 has taken a fork
+41 65 has taken a fork
+41 33 is eating
+41 22 is thinking
+41 77 is eating
+41 65 is eating
+41 24 is eating
+42 117 is thinking
+42 117 has taken a fork
+42 117 has taken a fork
+42 117 is eating
+42 178 is thinking
+42 175 is thinking
+42 175 has taken a fork
+42 175 has taken a fork
+42 175 is eating
+42 178 has taken a fork
+42 178 has taken a fork
+42 178 is eating
+42 121 is thinking
+42 160 is thinking
+42 121 has taken a fork
+42 163 is thinking
+42 121 has taken a fork
+42 155 is thinking
+42 155 has taken a fork
+42 155 has taken a fork
+42 155 is eating
+42 160 has taken a fork
+42 144 is thinking
+42 160 has taken a fork
+42 144 has taken a fork
+42 154 is thinking
+42 144 has taken a fork
+42 170 is thinking
+42 154 has taken a fork
+42 144 is eating
+42 121 is eating
+42 170 has taken a fork
+42 171 is thinking
+42 170 has taken a fork
+42 158 is thinking
+42 171 has taken a fork
+42 119 is thinking
+42 158 has taken a fork
+42 127 is thinking
+42 141 is thinking
+42 138 is thinking
+42 124 is thinking
+42 158 has taken a fork
+42 141 has taken a fork
+42 138 has taken a fork
+42 141 has taken a fork
+42 158 is eating
+42 138 has taken a fork
+42 124 has taken a fork
+42 163 has taken a fork
+42 124 has taken a fork
+42 163 has taken a fork
+42 123 is thinking
+42 170 is eating
+42 137 is thinking
+42 163 is eating
+42 169 is thinking
+42 115 is thinking
+42 138 is eating
+42 143 is thinking
+42 141 is eating
+42 115 has taken a fork
+42 115 has taken a fork
+42 115 is eating
+42 182 is thinking
+42 182 has taken a fork
+42 182 has taken a fork
+42 135 is thinking
+42 182 is eating
+42 135 has taken a fork
+42 122 is thinking
+42 135 has taken a fork
+42 135 is eating
+42 129 is thinking
+42 124 is eating
+42 119 has taken a fork
+42 119 has taken a fork
+42 157 is thinking
+42 181 is thinking
+42 120 is thinking
+42 153 is thinking
+42 129 has taken a fork
+42 129 has taken a fork
+42 129 is eating
+42 119 is eating
+42 161 is thinking
+42 165 is thinking
+42 118 is thinking
+42 136 is thinking
+42 152 is thinking
+42 174 is thinking
+42 174 has taken a fork
+42 160 is eating
+42 165 has taken a fork
+42 146 is thinking
+42 140 is thinking
+42 151 is thinking
+42 125 is thinking
+42 140 has taken a fork
+42 172 is thinking
+42 165 has taken a fork
+42 127 has taken a fork
+42 165 is eating
+42 161 has taken a fork
+42 177 is thinking
+42 130 is thinking
+42 125 has taken a fork
+42 128 is thinking
+42 146 has taken a fork
+42 146 has taken a fork
+42 146 is eating
+42 167 is thinking
+42 133 is thinking
+42 167 has taken a fork
+42 133 has taken a fork
+42 167 has taken a fork
+42 133 has taken a fork
+42 167 is eating
+42 133 is eating
+42 159 is thinking
+42 156 is thinking
+42 127 has taken a fork
+42 152 has taken a fork
+42 131 is thinking
+42 131 has taken a fork
+42 152 has taken a fork
+42 152 is eating
+42 131 has taken a fork
+42 131 is eating
+42 149 is thinking
+42 148 is thinking
+42 149 has taken a fork
+42 127 is eating
+42 149 has taken a fork
+42 149 is eating
+42 148 has taken a fork
+43 185 is thinking
+43 185 has taken a fork
+43 185 has taken a fork
+43 185 is eating
+43 189 is thinking
+43 189 has taken a fork
+43 199 is thinking
+43 189 has taken a fork
+43 189 is eating
+43 195 is thinking
+43 195 has taken a fork
+43 195 has taken a fork
+43 195 is eating
+43 197 is thinking
+43 197 has taken a fork
+43 197 has taken a fork
+43 197 is eating
+43 200 is sleeping
+43 191 is thinking
+43 191 has taken a fork
+43 191 has taken a fork
+43 191 is eating
+43 199 has taken a fork
+43 199 has taken a fork
+43 199 is eating
+43 190 is thinking
+43 1 has taken a fork
+43 194 is thinking
+43 194 has taken a fork
+43 192 is thinking
+43 1 is eating
+43 198 is thinking
+43 188 is thinking
+43 188 has taken a fork
+43 187 is thinking
+51 2 died
+51 52 has taken a fork
+51 8 has taken a fork
+51 8 has taken a fork
+51 8 is eating
+51 85 has taken a fork
+51 192 has taken a fork
+51 192 has taken a fork
+51 157 has taken a fork
+51 157 has taken a fork
+51 157 is eating
+51 21 has taken a fork
+51 21 is eating
+51 136 has taken a fork
+51 136 has taken a fork
+51 136 is eating
+51 67 has taken a fork
+51 67 has taken a fork
+51 67 is eating
+51 13 has taken a fork
+51 13 has taken a fork
+51 13 is eating
+51 91 has taken a fork
+51 74 has taken a fork
+51 74 has taken a fork
+51 74 is eating
+51 52 has taken a fork
+51 52 is eating
+51 19 has taken a fork
+51 19 has taken a fork
+51 19 is eating
+51 169 has taken a fork
+51 169 has taken a fork
+51 169 is eating
+51 171 has taken a fork
+51 171 is eating
+51 192 is eating
+51 177 has taken a fork
+51 177 has taken a fork
+51 177 is eating
+51 103 has taken a fork
+51 194 has taken a fork
+51 58 has taken a fork
+51 118 has taken a fork
+51 198 has taken a fork
+51 89 has taken a fork
+51 159 has taken a fork
+51 41 has taken a fork
+51 30 has taken a fork
+51 89 has taken a fork
+51 10 has taken a fork
+51 105 has taken a fork
+51 89 is eating
+51 154 has taken a fork
+51 49 has taken a fork
+51 98 has taken a fork
+51 156 has taken a fork
+51 154 is eating
+51 156 has taken a fork
+51 188 has taken a fork
+51 172 has taken a fork
+51 110 has taken a fork
+51 2 has taken a fork
+51 64 has taken a fork
+51 110 has taken a fork
+51 81 has taken a fork
+51 16 has taken a fork
+51 2 has taken a fork
+51 64 has taken a fork
+51 64 is eating
+51 81 has taken a fork
+51 34 has taken a fork
+51 16 is eating
+51 56 has taken a fork
+51 94 has taken a fork
+51 34 has taken a fork
+51 103 has taken a fork
+51 25 has taken a fork
+51 103 is eating
+51 35 has taken a fork
+51 54 has taken a fork
+51 22 has taken a fork
+51 70 has taken a fork
+51 22 has taken a fork
+51 151 has taken a fork
+51 54 has taken a fork
+51 70 is eating
+51 123 has taken a fork
+51 72 has taken a fork
+51 54 is eating
+51 181 has taken a fork
+51 72 has taken a fork
+51 58 has taken a fork
+51 72 is eating
+51 112 has taken a fork
+51 128 has taken a fork
+51 161 has taken a fork
+51 27 has taken a fork
+51 161 is eating
+51 47 has taken a fork
+51 5 has taken a fork
+51 128 has taken a fork
+51 27 has taken a fork
+51 128 is eating
+51 105 has taken a fork
+51 61 has taken a fork
+51 27 is eating
+51 37 has taken a fork
+51 30 is eating
+51 10 is eating
+51 190 has taken a fork
+51 188 is eating
+51 156 is eating
+51 37 has taken a fork
+51 100 has taken a fork
+51 18 has taken a fork
+51 172 has taken a fork
+51 100 has taken a fork
+51 137 has taken a fork
+51 18 has taken a fork
+51 172 is eating
+51 2 is eating
+51 

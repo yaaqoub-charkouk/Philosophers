@@ -1,12 +1,14 @@
 #include "../philo.h"
 
-void	ft_free(t_data *data, t_philo **philo, int i)
+void	ft_free(t_data *data, t_philo **philo, size_t i)
 {
 	if (*philo)
 	{
 		free(*philo);
 		*philo = NULL;
 	}
+	if (i == 0)
+		pthread_mutex_destroy(&data->death_mutex); // the function will be called with 0 if the first mutex was not successfully initialized;
 	if (data->forks)
 	{
 		while (i >= 0 && i < data->num_of_philos)
@@ -20,7 +22,7 @@ void	ft_free(t_data *data, t_philo **philo, int i)
 
 void	free_and_destroy(t_data *data, t_philo **philo)
 {
-	int i;
+	size_t i;
 
 
 	if (*philo)

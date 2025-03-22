@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/18 12:42:12 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/22 12:57:49 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ typedef struct s_data t_data;
 
 typedef struct s_philo
 {
-	int			id;
-	size_t		last_time_eats;
-	int 		num_times_eats;	
+	size_t		id;
+	time_t		last_time_eats;
+	size_t 		num_times_eats;	
 	mutex_t		*left_fork;
 	mutex_t		*right_fork;
 	pthread_t	thread;
@@ -40,28 +40,38 @@ typedef struct s_philo
 
 typedef struct s_data
 {
-	int		num_of_philos;
-	int		time_to_die;
-	int		time_to_eat;
-	int		time_to_sleep;
-	int		max_eating_count_p; // optional 
-	mutex_t	*forks;
-	size_t	zero_time;
-	int		is_died;
+	size_t		num_of_philos;
+	time_t		time_to_die;
+	time_t		time_to_eat;
+	time_t		time_to_sleep;
+	int			max_eating_count_p; // optional 
+	time_t		zero_time;
+	mutex_t		*forks;
+	mutex_t		death_mutex;
+	mutex_t		print_mutex;
+	pthread_t	death_monitor; // create it at init
+	int			is_died;
 }	t_data;
 
 int		init_data_struct(t_data *data, char **av);
 int		init_philo_struct(t_philo *philosophers, t_data *data);
-void	ft_free(t_data *data, t_philo **philo, int i);
+void	ft_free(t_data *data, t_philo **philo, size_t i);
 void	*routine(void *param);
 void	free_and_destroy(t_data *data, t_philo **philo);
 
-size_t	get_current_time(t_data *data);
-size_t	get_zero_time(void);
+time_t	get_current_time(t_data *data);
+time_t	get_zero_time(void);
 
 // actions
 void	eat(t_philo *philo);
-void	sleep(t_philo *philo);
+void	ft_sleep(t_philo *philo);
 void	think(t_philo *philo);
+
+void	ft_usleep(time_t time, t_data *data);
+
+void	ft_printf(t_philo *philo, char *message);
+
+//death monitoring
+void	*death_monitoring(void *philos);
 
 #endif

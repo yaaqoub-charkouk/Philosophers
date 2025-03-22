@@ -1,25 +1,11 @@
 #include "philo.h"
-#include <sys/time.h>
 
-int	is_died(t_philo *philo)
+void	ft_printf(t_philo *philo, char *message)
 {
-	int	i;
-
-	i = 0;
-	while(i < philo->data->num_of_philos)
-	{
-		if (philo[i].data->is_died)
-			return (1);
-		if ((get_current_time(philo[i].data) - philo[i].last_time_eats) > philo[i].data->time_to_die)
-		{
-			printf("%lld %d died", get_current_time(philo[i].data), philo[i].id);
-			philo[i].data->is_died = 1;
-			return (1);
-		}
-		i++;
-		usleep(500);
-	}
-	return (0);
+	pthread_mutex_lock(&philo->data->print_mutex);
+	if (philo->data->is_died)
+		printf("%zu %zu %s\n", get_current_time(philo->data), philo->id, message);
+	pthread_mutex_unlock(&philo->data->print_mutex);
 }
 
 void	*routine(void *param)
@@ -30,10 +16,14 @@ void	*routine(void *param)
 	while (!philosopher->data->is_died)
 	{
 		eat(philosopher);
-		sleep(philosopher);
+		// if (philosopher->data->is_died)
+		// 	break ;
+		ft_sleep(philosopher);
+		// if (philosopher->data->is_died)
+		// 	break ;
 		think(philosopher);
-		if (is_died(philosopher))
-			break ;
+		// if (philosopher->data->is_died)
+		// 	break ;
 	}
 	return (NULL);
 }

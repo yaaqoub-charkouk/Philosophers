@@ -2,6 +2,8 @@
 
 int	init_data_struct(t_data *data, char **av)
 {
+	 //mutex init for death monitothread
+	data->is_died = 0;
 	data->num_of_philos = ft_atoi(av[1]);
 	data->time_to_die = ft_atoi(av[2]);
 	data->time_to_eat = ft_atoi(av[3]);
@@ -18,14 +20,14 @@ int	init_data_struct(t_data *data, char **av)
 
 int	join_threads(t_philo *philosophers, t_data *data)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < data->num_of_philos)
 	{
 		if (pthread_join(philosophers[i].thread, NULL))
 		{
-			write(2, "pthread_join failed .", 21);
+			write(2, "pthread_join failed .\n", 21);
 			ft_free(data, &philosophers, i); // should i destroy mutex ??
 			return (0);
 		}
@@ -36,7 +38,7 @@ int	join_threads(t_philo *philosophers, t_data *data)
 
 int	mutex_init(t_philo *philosophers, t_data *data)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < data->num_of_philos)
@@ -50,7 +52,7 @@ int	mutex_init(t_philo *philosophers, t_data *data)
 
 int	init_philo_struct(t_philo *philosophers, t_data *data)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	data->forks = malloc(data->num_of_philos * sizeof(mutex_t));
@@ -77,6 +79,10 @@ int	init_philo_struct(t_philo *philosophers, t_data *data)
 		}
 		i++;
 	}
+	if (pthread_mutex_init(&data->death_mutex, NULL) || pthread_mutex_init(&data->print_mutex, NULL))
+		return (free_and_destroy(data, &philosophers), 0);
+	pthread_create(&data->death_monitor, NULL, death_monitoring, philosophers);
 	join_threads(philosophers, data); // until now everything was good ,no problem occurs
+	pthread_join(data->death_monitor, NULL);
 	return (1);
 }
