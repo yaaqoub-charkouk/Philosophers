@@ -41,9 +41,10 @@ int	mutex_init(t_philo *philosophers, t_data *data)
 	size_t	i;
 
 	i = 0;
+	pthread_mutex_init(&data->eat, NULL); // just for testing the function of last eat , trying to avoid data race 
 	while (i < data->num_of_philos)
 	{
-		if (pthread_mutex_init(&data->forks[i], NULL) || pthread_mutex_init(&philosophers[i].philo_mutex, NULL)) // JUST TO AVOID DATA RACE
+		if (pthread_mutex_init(&data->forks[i], NULL)) // JUST TO AVOID DATA RACE
 			return (ft_free(data, &philosophers, i - 1), 0); // so that the current was not initialized ;
 		i++;
 	}

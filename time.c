@@ -33,7 +33,7 @@ void	ft_usleep(time_t time, t_data *data)
 	start = get_zero_time();
 	while (get_zero_time() - start < time)
 	{
-		if (!is_still_alive(data))
+		if (get_flag_value(0, data))
 			break ;
 		usleep(100);
 	}
