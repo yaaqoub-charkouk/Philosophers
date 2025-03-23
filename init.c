@@ -43,7 +43,7 @@ int	mutex_init(t_philo *philosophers, t_data *data)
 	i = 0;
 	while (i < data->num_of_philos)
 	{
-		if (pthread_mutex_init(&data->forks[i], NULL) != 0)
+		if (pthread_mutex_init(&data->forks[i], NULL) || pthread_mutex_init(&philosophers[i].philo_mutex, NULL)) // JUST TO AVOID DATA RACE
 			return (ft_free(data, &philosophers, i - 1), 0); // so that the current was not initialized ;
 		i++;
 	}
@@ -82,7 +82,7 @@ int	init_philo_struct(t_philo *philosophers, t_data *data)
 	if (pthread_mutex_init(&data->death_mutex, NULL) || pthread_mutex_init(&data->print_mutex, NULL))
 		return (free_and_destroy(data, &philosophers), 0);
 	pthread_create(&data->death_monitor, NULL, death_monitoring, philosophers);
-	join_threads(philosophers, data); // until now everything was good ,no problem occurs
 	pthread_join(data->death_monitor, NULL);
+	join_threads(philosophers, data); // until now everything was good ,no problem occurs
 	return (1);
 }

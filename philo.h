@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/22 12:57:49 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/23 07:18:04 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct s_philo
 	mutex_t		*right_fork;
 	pthread_t	thread;
 	t_data		*data; // each philo should have access to global data
+	mutex_t		philo_mutex;
 }	t_philo;
 
 typedef struct s_data
@@ -49,6 +50,7 @@ typedef struct s_data
 	mutex_t		*forks;
 	mutex_t		death_mutex;
 	mutex_t		print_mutex;
+	
 	pthread_t	death_monitor; // create it at init
 	int			is_died;
 }	t_data;
@@ -73,5 +75,6 @@ void	ft_printf(t_philo *philo, char *message);
 
 //death monitoring
 void	*death_monitoring(void *philos);
+int		is_still_alive(t_data	*data);
 
 #endif

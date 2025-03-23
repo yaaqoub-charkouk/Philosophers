@@ -1,6 +1,0 @@
-1 - read the args
-2 - init the data struct
-3 - allocate sufficient memory for the philosophers array
-4 - iterate through philosopheres and create mutex 
-5 - get time 
-6 - routine
