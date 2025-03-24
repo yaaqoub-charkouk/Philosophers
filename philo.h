@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/23 09:49:49 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/24 11:49:22 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_philo
 {
 	size_t		id;
 	time_t		last_time_eats;
-	size_t 		num_times_eats;	
+	int 		num_times_eats;	
 	mutex_t		*left_fork;
 	mutex_t		*right_fork;
 	pthread_t	thread;
@@ -80,6 +80,11 @@ void	*death_monitoring(void *philos);
 // int		is_still_alive(t_data	*data);
 
 // just for testing
-int	get_flag_value(int died, t_data *data);
-void    last_eat(t_philo *philo, int flag, time_t *time);
+// int		get_flag_value(int died, t_data *data);
+void	last_eat(t_philo *philo, int flag, time_t *time, int *num_eat);
+
+// get and set
+void	set_death(t_data *data);
+int		get_death(t_data *data);
+
 #endif
