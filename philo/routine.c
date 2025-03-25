@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:46:00 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 12:13:39 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 22:00:30 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void	*routine(void *param)
 		return (NULL);
 	}
 	if (philosopher->id % 2 == 0)
-		usleep(10);
+		usleep(philosopher->data->time_to_sleep * 1000);
+		// usleep(1000);
 	while (!get_death(philosopher->data))
 	{
 		eat(philosopher);

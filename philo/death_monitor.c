@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 12:46:12 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 10:43:47 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 21:41:56 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	is_died(t_philo *philo, int *is_finished)
 	{
 		get_set_last_eat(philo, 0, &last_time_eats, &num_eat);
 		if ((get_current_time(philo->data) - last_time_eats) 
-			> philo[i].data->time_to_die)
+			>= philo[i].data->time_to_die)
 		{
 			set_death(philo->data);
 			pthread_mutex_lock(&philo->data->print_mutex);
