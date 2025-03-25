@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:18:49 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 08:53:56 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 12:15:32 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 void	clean_up(t_data *data, size_t	i, int flag)
 {
+	size_t	j;
+
+	if (flag == 3)
+	{
+		j = 0;
+		while (j < data->num_of_philos)
+			pthread_mutex_destroy(&data->forks[j++]);
+		free(data->forks);
+		data->forks = NULL;
+	}
 	if (data->forks && i < data->num_of_philos && i != 0)
 	{
 		while (i >= 0)

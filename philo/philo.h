@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 08:55:26 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 12:16:30 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ typedef struct s_data
 	time_t		time_to_sleep;
 	int			max_eating_count_p;
 	time_t		zero_time;
+	int			is_died;
+	pthread_t	death_monitor;
 	t_mutex		*forks;
 	t_mutex		death_mutex;
 	t_mutex		print_mutex;
-	pthread_t	death_monitor;
-	int			is_died;
 	t_mutex		eat_mutex;
 }	t_data;
 
