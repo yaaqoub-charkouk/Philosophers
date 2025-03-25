@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 06:52:53 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 08:55:44 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 15:28:01 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ int	init_philo_helper(t_philo *philosophers, t_data *data, int i)
 	philosophers[i].left_fork = &data->forks[i];
 	philosophers[i].right_fork = &data->forks[(i + 1) % data->num_of_philos];
 	philosophers[i].data = data;
-	if (!mutex_init(data))
-		return (0);
 	if (pthread_create(&philosophers[i].thread, NULL,
 			routine, &philosophers[i]))
 	{
@@ -114,6 +112,8 @@ int	init_philo_struct(t_philo *philosophers, t_data *data)
 		clean_up(data, 0, 0);
 		return (free(philosophers), 0);
 	}
+	if (!mutex_init(data))
+		return (0);
 	while (i < data->num_of_philos)
 	{
 		if (!init_philo_helper(philosophers, data, i))
