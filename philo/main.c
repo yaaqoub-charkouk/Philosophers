@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_set_death.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 12:47:47 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/24 12:47:48 by ycharkou         ###   ########.fr       */
+/*   Created: 2025/03/25 08:38:00 by ycharkou          #+#    #+#             */
+/*   Updated: 2025/03/25 11:13:36 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-void	set_death(t_data *data)
+void	leaks_test()
 {
-	pthread_mutex_lock(&data->death_mutex);
-	data->is_died = 1;
-	pthread_mutex_unlock(&data->death_mutex);
+	system("leaks philo");
 }
-
-int	get_death(t_data *data)
+int	main(int ac, char **av)
 {
-	int	flag;
+	t_data	data;
+	t_philo	*philosophers;
 
-	pthread_mutex_lock(&data->death_mutex);
-	flag = data->is_died;
-	pthread_mutex_unlock(&data->death_mutex);
-	return (flag);
+	atexit(leaks_test);
+	if (ac == 5 || ac == 6)
+	{
+		if (!init_data_struct(&data, av))
+			return (1);
+		philosophers = malloc(data.num_of_philos * sizeof(t_philo));
+		if (!philosophers)
+			return (1);
+		if (!init_philo_struct(philosophers, &data))
+			return (1);
+	}
+	else
+		printf("Error\n");
+	return (0);
 }

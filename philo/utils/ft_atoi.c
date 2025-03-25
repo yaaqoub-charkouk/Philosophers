@@ -6,11 +6,11 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:18:11 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/24 12:26:06 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/25 08:55:13 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "../philo.h"
 
 int	ft_atoi(const char *str)
 {

@@ -1,9 +1,9 @@
 NAME = philo
 CC = cc
 CFLAGS = -Wall -Wextra -Werror #-fsanitize=thread -g
-OBJ = utils/clean.o utils/ft_atoi.o init.o main.o routine_actions.o routine.o time.o death_monitor.o get_set_death.o
+OBJ = utils/clean.o utils/ft_atoi.o init.o main.o routine_actions.o routine.o time.o death_monitor.o 
 
-all: $(NAME)  ##################
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
