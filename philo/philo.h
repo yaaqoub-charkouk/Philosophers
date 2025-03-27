@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 12:16:30 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/27 06:39:57 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	eat(t_philo *philo);
 void	ft_sleep(t_philo *philo);
 void	think(t_philo *philo);
 void	ft_usleep(time_t time, t_data *data);
-void	ft_printf(t_philo *philo, char *message);
+void	write_log(t_philo *philo, char *message);
 int		ft_atoi(const char *str);
 void	*death_monitoring(void *philos);
 void	get_set_last_eat(t_philo *philo, int flag, time_t *time, int *num_eat);

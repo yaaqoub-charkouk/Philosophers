@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 12:46:12 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 21:41:56 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:43:18 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,38 @@ int	get_death(t_data *data)
 	return (flag);
 }
 
+void	make_philos_die(t_philo *philo, int i)
+{
+	set_death(philo->data);
+	pthread_mutex_lock(&philo->data->print_mutex);
+	printf("\033[1;31m%zu %zu died\033[0m\n",
+		get_current_time(philo->data), philo[i].id);
+	pthread_mutex_unlock(&philo->data->print_mutex);
+}
+
 int	is_died(t_philo *philo, int *is_finished)
 {
 	size_t	i;
 	int		num_eat;
 	time_t	last_time_eats;
+	size_t	finished_count;
 
 	i = 0;
+	finished_count = 0;
 	while (i < philo->data->num_of_philos)
 	{
-		get_set_last_eat(philo, 0, &last_time_eats, &num_eat);
+		get_set_last_eat(&philo[i], 0, &last_time_eats, &num_eat);
 		if ((get_current_time(philo->data) - last_time_eats) 
 			>= philo[i].data->time_to_die)
-		{
-			set_death(philo->data);
-			pthread_mutex_lock(&philo->data->print_mutex);
-			printf("\033[1;31m%zu %zu died\033[0m\n",
-				get_current_time(philo->data), philo[i].id);
-			pthread_mutex_unlock(&philo->data->print_mutex);
-			return (1);
-		}
+			return (make_philos_die(philo, i), 1);
 		if (philo->data->max_eating_count_p != -2 
 			&& num_eat == philo->data->max_eating_count_p)
-			*is_finished = 1;
+			finished_count++;
 		i++;
 		usleep(500);
 	}
+	if (finished_count == philo->data->num_of_philos)
+		*is_finished = 1;
 	return (0);
 }
 
@@ -64,6 +70,7 @@ void	*death_monitoring(void *philos)
 	int		is_finished;
 
 	philosophers = (t_philo *)philos;
+	is_finished = 0;
 	while (1)
 	{
 		if (is_died(philos, &is_finished))

@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:38:00 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/25 12:14:10 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/27 07:59:25 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	main(int ac, char **av)
 			return (1);
 	}
 	else
-		printf("Error\n");
+		printf("Error\nInvalid arguments ");
 	return (0);
 }
