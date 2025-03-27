@@ -1,6 +1,6 @@
 NAME = philo
 CC = cc
-CFLAGS = -Wall -Wextra -Werror  #-g -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror 
 OBJ = utils/clean.o utils/ft_atoi.o init.o main.o routine_actions.o routine.o time.o death_monitor.o 
 
 all: $(NAME)

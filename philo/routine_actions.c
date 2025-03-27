@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:42:02 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/27 08:42:43 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/27 09:04:11 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,10 @@ void	get_set_last_eat(t_philo *philo, int flag, time_t *time, int *num_eat)
 
 void	take_fork(t_philo *philo)
 {
-	if (philo->id % 2 == 1)
-	{
-		pthread_mutex_lock(philo->right_fork);
-		write_log(philo, "has taken a fork");
-		pthread_mutex_lock(philo->left_fork);
-		write_log(philo, "has taken a fork");
-	}
-	else
-	{
-		pthread_mutex_lock(philo->left_fork);
-		write_log(philo, "has taken a fork");
-		pthread_mutex_lock(philo->right_fork);
-		write_log(philo, "has taken a fork");
-	}
+	pthread_mutex_lock(philo->left_fork);
+	write_log(philo, "has taken a fork");
+	pthread_mutex_lock(philo->right_fork);
+	write_log(philo, "has taken a fork");
 }
 
 void	eat(t_philo *philo)
