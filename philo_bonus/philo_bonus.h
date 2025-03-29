@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:13:33 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 12:28:18 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_data
 	sem_t		*forks;
 	sem_t		*print;
 	sem_t		*is_died;
+	sem_t		*is_finished;
 }	t_data;
 
 typedef struct s_philo

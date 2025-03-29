@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:16 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:13:57 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 12:31:19 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	init_semaphores(t_data *data)
 			0644, data->num_of_philos);
 	data->print = sem_open("/print", O_CREAT | O_EXCL, 0644, 1);
 	data->is_died = sem_open("/is_died", O_CREAT | O_EXCL, 0644, 0);
+	data->is_finished = sem_open("/is_finished", O_CREAT | O_EXCL, 0644, 0);
 }
 
 int	init_data_struct(t_data *data, char **av)

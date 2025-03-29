@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 12:00:37 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:22:53 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 12:31:41 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ void	ft_usleep(time_t time, t_data *data, t_philo *philo, time_t last_meal)
 			exit(0);
 		}
 		if (data->max_eating_count_p != -2 && philo->num_eaten == data->max_eating_count_p)
+		{
+			sem_post(data->is_finished);
 			exit(0);
+		}
 		usleep(100);
 	}
 }
