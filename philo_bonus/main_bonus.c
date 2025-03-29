@@ -6,13 +6,13 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:12 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 08:47:01 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 12:01:53 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_data	data;
 	t_philo	*philosophers;
