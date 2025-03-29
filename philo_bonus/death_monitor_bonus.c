@@ -6,30 +6,23 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:19 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 06:49:21 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:34:49 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-void	monitor_death(t_data *data)
+void	monitor_death(t_data *data, t_philo *philosophers)
 {
-	size_t	i;
-	int		status;
+	sem_wait(data->is_died); // Wait for any death signal
+	size_t  i = 0;
 
-	sem_wait(data->is_died); // now the sem is 0 again no body will enter again ;
-	i = 0;
 	while (i < data->num_of_philos)
 	{
-		kill(data->philosophers[i].pid, SIGKILL);
+		kill(philosophers[i].pid, SIGKILL);
 		i++;
 	}
-	i = 0;
-	while (i < data->num_of_philos)
-	{
-		waitpid(data->philosophers[i].pid, &status, 0);
-		i++;
-	}
+	while (waitpid(-1, NULL, 0) > 0);
 	sem_close(data->forks);
 	sem_close(data->print);
 	sem_close(data->is_died);

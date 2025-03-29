@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 06:30:55 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 08:48:25 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,7 @@
 # include <semaphore.h>
 # include <signal.h>
 
-typedef struct s_philo
-{
-	size_t	id;
-	pid_t	pid;
-} t_philo;
+
 
 typedef struct s_data
 {
@@ -39,9 +35,14 @@ typedef struct s_data
 	sem_t		*forks;
 	sem_t		*print;
 	sem_t		*is_died;
-	t_philo		*philosophers;
 } t_data;
 
+typedef struct s_philo
+{
+	size_t	id;
+	pid_t	pid;
+	t_data	*data;
+} t_philo;
 
 //routine
 void	routine(t_data *data, t_philo *philo);
@@ -55,7 +56,7 @@ time_t	get_current_time(t_data	*data);
 time_t	get_zero_time(void);
 
 // death
-void	monitor_death(t_data *data);
+void	monitor_death(t_data *data, t_philo	*philosophers);
 
 
 #endif

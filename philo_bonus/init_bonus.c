@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:16 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 06:50:59 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 09:53:29 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	init_semaphores(t_data *data)
 {
-	data->forks = sem_open("/forks", O_CREAT, 0644, data->num_of_philos);
-	data->print = sem_open("/print", O_CREAT, 0644, 1);
-	data->is_died = sem_open("/is_died", O_CREAT, 0644, 0);
+	sem_unlink("/forks");  // Cleanup any leftover semaphores
+    sem_unlink("/print");
+    sem_unlink("/is_died");
+	data->forks = sem_open("/forks", O_CREAT | O_EXCL, 0644, data->num_of_philos);
+	data->print = sem_open("/print", O_CREAT | O_EXCL, 0644, 1);
+	data->is_died = sem_open("/is_died", O_CREAT | O_EXCL, 0644, 0);
 }
 
 int	init_data_struct(t_data *data, char **av)
@@ -44,11 +47,13 @@ int	create_philo_process(t_data *data, t_philo *philosophers) // from here proce
 {
 	int	i;
 
-	data->philosophers = philosophers; // so that the data have reference to philo struct , and it will be able to kill all process 
+	// data->philosophers = philosophers; // so that the data have reference to philo struct , and it will be able to kill all process 
 	i = 0;
+	printf("init\n");
 	while (i < data->num_of_philos)
 	{
 		philosophers[i].id = i + 1; // here we give the philo an id
+		philosophers[i].data = data;
 		philosophers[i].pid = fork(); 
 		if (philosophers[i].pid < 0)
 			return (write(2, "fork() Failed.", 16), 0);

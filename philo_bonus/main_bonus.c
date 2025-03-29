@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:12 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 06:32:47 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 08:47:01 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(int ac, char **av)
 		if (!philosophers)
 			return (write (2, "allocation failure .\n", 23), 1);
 		create_philo_process(&data, philosophers);
-		monitor_death(&data);
+		monitor_death(&data, philosophers);
 	}
 	else
 		write(2, "Error\n Invalid args", 21);
