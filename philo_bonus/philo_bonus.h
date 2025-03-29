@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/27 13:53:14 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 06:30:55 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,17 @@
 # include <stdio.h>
 # include <sys/time.h>
 # include <unistd.h>
+# include <stdlib.h>
 # include <limits.h>
 # include <pthread.h>
 # include <semaphore.h>
+# include <signal.h>
+
+typedef struct s_philo
+{
+	size_t	id;
+	pid_t	pid;
+} t_philo;
 
 typedef struct s_data
 {
@@ -28,10 +36,26 @@ typedef struct s_data
 	time_t		time_to_sleep;
 	int			max_eating_count_p;
 	time_t		zero_time;
-	int			is_died;
+	sem_t		*forks;
+	sem_t		*print;
+	sem_t		*is_died;
+	t_philo		*philosophers;
 } t_data;
 
-int     init_data_struct(t_data *data, char **av);
+
+//routine
+void	routine(t_data *data, t_philo *philo);
+
+int		init_data_struct(t_data *data, char **av);
+int		create_philo_process(t_data *data, t_philo *philos);
+int		ft_atoi(const char *str);
+
+//time
+time_t	get_current_time(t_data	*data);
+time_t	get_zero_time(void);
+
+// death
+void	monitor_death(t_data *data);
 
 
 #endif

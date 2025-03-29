@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 14:13:12 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 06:32:47 by ycharkou         ###   ########.fr       */
+/*   Created: 2024/10/26 12:18:11 by ycharkou          #+#    #+#             */
+/*   Updated: 2025/03/29 06:23:35 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-int main(int ac, char **av)
+int	ft_atoi(const char *str)
 {
-	t_data	data;
-	t_philo	*philosophers;
+	long int	result;
+	int			sign;
+	int			i;
 
-	if (ac == 5 || ac == 6)
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-')
+		return (-1);
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		init_data_struct(&data, av);
-		philosophers = malloc(data.num_of_philos * sizeof(t_philo));
-		if (!philosophers)
-			return (write (2, "allocation failure .\n", 23), 1);
-		create_philo_process(&data, philosophers);
-		monitor_death(&data);
+		if (result > (LONG_MAX - (str[i] - '0')) / 10)
+			return (-1);
+		result = result * 10 + (str[i++] - '0');
 	}
-	else
-		write(2, "Error\n Invalid args", 21);
-	return (0);
+	if (str[i])
+		return (-1);
+	return ((int)(result * sign));
 }
