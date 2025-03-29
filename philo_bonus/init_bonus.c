@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:16 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 09:53:29 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/29 11:19:22 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,10 @@ int	init_data_struct(t_data *data, char **av)
 
 int	create_philo_process(t_data *data, t_philo *philosophers) // from here process start execution
 {
-	int	i;
+	size_t	i;
 
 	// data->philosophers = philosophers; // so that the data have reference to philo struct , and it will be able to kill all process 
 	i = 0;
-	printf("init\n");
 	while (i < data->num_of_philos)
 	{
 		philosophers[i].id = i + 1; // here we give the philo an id
