@@ -6,30 +6,50 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:19 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:36:32 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/30 16:32:24 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-void	monitor_death(t_data *data, t_philo *philosophers)
+void	*monitor_death(void	*parameter)
 {
+	t_philo *philosophers;
+	int status;
 	size_t	i;
 
-	sem_wait(data->is_died);
+	philosophers = (t_philo *)parameter;
+	// printf("%zu death monitor is waiting\n", get_current_time(philosophers->data));
+	// sem_wait(philosophers->data->is_died);
+
 	i = 0;
-	while (i < data->num_of_philos)
+	while (i < philosophers->data->num_of_philos)
 	{
-		kill(philosophers[i].pid, SIGKILL);
-		i++;
+		if (waitpid(-1, &status, 0) > 0)
+		{
+			// printf("status  %d\n", WEXITSTATUS(status) );
+			if (WEXITSTATUS(status) == 1)
+			{
+				i = 0;
+				while (i < philosophers->data->num_of_philos)
+				{
+					kill(philosophers[i].pid, SIGKILL);
+					// printf("%d\n", philosophers[i].pid);
+					i++;
+				}
+				break ;
+			}
+			else
+				i++;
+		}
 	}
-	while (waitpid(-1, NULL, 0) > 0)
-		;
-	sem_close(data->forks);
-	sem_close(data->print);
-	sem_close(data->is_died);
+	sem_close(philosophers->data->forks);
+	sem_close(philosophers->data->print);
+	sem_close(philosophers->data->is_died);
 	sem_unlink("/forks");
 	sem_unlink("/print");
 	sem_unlink("/is_died");
-	exit(0);
+	// printf("before exiting");
+	// exit(0);
+	return (NULL);
 }

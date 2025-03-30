@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:28:18 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/03/30 13:48:59 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_data
 	sem_t		*print;
 	sem_t		*is_died;
 	sem_t		*is_finished;
+	sem_t		*death_sem;
 }	t_data;
 
 typedef struct s_philo
@@ -42,6 +43,7 @@ typedef struct s_philo
 	pid_t	pid;
 	t_data	*data;
 	int		num_eaten;
+	time_t	last_meal;
 }	t_philo;
 
 //routine
@@ -56,6 +58,6 @@ time_t	get_current_time(t_data	*data);
 time_t	get_zero_time(void);
 
 // death
-void	monitor_death(t_data *data, t_philo	*philosophers);
-
+void	*monitor_death(void	*parameter);
+void	*wait_until_finish(void	*parameter);
 #endif
