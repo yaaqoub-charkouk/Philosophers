@@ -6,35 +6,45 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:19 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/30 16:32:24 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/01 19:58:26 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-void	*monitor_death(void	*parameter)
+void	write_log(t_data *data, size_t id, char *log)
 {
-	t_philo *philosophers;
-	int status;
-	size_t	i;
+	sem_wait(data->print);
+	printf("%zu %zu %s\n", get_current_time(data), id, log);
+	sem_post(data->print);
+}
 
-	philosophers = (t_philo *)parameter;
-	// printf("%zu death monitor is waiting\n", get_current_time(philosophers->data));
-	// sem_wait(philosophers->data->is_died);
+void	close_sem(t_data *data)
+{
+	sem_close(data->forks);
+	sem_close(data->print);
+	sem_close(data->death_sem);
+	sem_unlink("/forks");
+	sem_unlink("/print");
+	sem_unlink("/death_sem");
+}
+
+void	monitor_death(t_philo	*philosophers)
+{
+	int		status;
+	size_t	i;
 
 	i = 0;
 	while (i < philosophers->data->num_of_philos)
 	{
 		if (waitpid(-1, &status, 0) > 0)
 		{
-			// printf("status  %d\n", WEXITSTATUS(status) );
 			if (WEXITSTATUS(status) == 1)
 			{
 				i = 0;
 				while (i < philosophers->data->num_of_philos)
 				{
 					kill(philosophers[i].pid, SIGKILL);
-					// printf("%d\n", philosophers[i].pid);
 					i++;
 				}
 				break ;
@@ -43,13 +53,5 @@ void	*monitor_death(void	*parameter)
 				i++;
 		}
 	}
-	sem_close(philosophers->data->forks);
-	sem_close(philosophers->data->print);
-	sem_close(philosophers->data->is_died);
-	sem_unlink("/forks");
-	sem_unlink("/print");
-	sem_unlink("/is_died");
-	// printf("before exiting");
-	// exit(0);
-	return (NULL);
+	close_sem(philosophers->data);
 }

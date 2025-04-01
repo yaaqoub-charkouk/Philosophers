@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/30 13:48:59 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/01 19:58:37 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ typedef struct s_data
 	time_t		zero_time;
 	sem_t		*forks;
 	sem_t		*print;
-	sem_t		*is_died;
-	sem_t		*is_finished;
 	sem_t		*death_sem;
 }	t_data;
 
@@ -48,7 +46,7 @@ typedef struct s_philo
 
 //routine
 void	routine(t_data *data, t_philo *philo);
-
+void	write_log(t_data *data, size_t id, char *log);
 int		init_data_struct(t_data *data, char **av);
 int		create_philo_process(t_data *data, t_philo *philos);
 int		ft_atoi(const char *str);
@@ -56,8 +54,10 @@ int		ft_atoi(const char *str);
 //time
 time_t	get_current_time(t_data	*data);
 time_t	get_zero_time(void);
+void	ft_usleep(time_t time);
 
 // death
-void	*monitor_death(void	*parameter);
-void	*wait_until_finish(void	*parameter);
+void	monitor_death(t_philo	*philosophers);
+void	close_sem(t_data *data);
+
 #endif

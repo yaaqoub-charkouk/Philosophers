@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:42:02 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/27 09:04:11 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/01 20:21:39 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ void	get_set_last_eat(t_philo *philo, int flag, time_t *time, int *num_eat)
 {
 	pthread_mutex_lock(&philo->data->eat_mutex);
 	if (flag == 1)
-	{
 		philo->last_time_eats = get_current_time(philo->data);
+	else if (flag == 2)
 		philo->num_times_eats++;
-	}
 	else
 	{
 		if (time)
@@ -46,8 +45,9 @@ void	eat(t_philo *philo)
 		return ;
 	take_fork(philo);
 	write_log(philo, "is eating");
-	ft_usleep(philo->data->time_to_eat, philo->data);
 	get_set_last_eat(philo, 1, 0, 0);
+	ft_usleep(philo->data->time_to_eat, philo->data);
+	get_set_last_eat(philo, 2, 0, 0);
 	pthread_mutex_unlock(philo->left_fork);
 	pthread_mutex_unlock(philo->right_fork);
 }

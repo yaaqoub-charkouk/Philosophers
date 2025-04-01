@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:46:41 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/03/29 12:04:08 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/01 16:40:41 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,15 @@ time_t	get_zero_time(void)
 		return (0);
 	}
 	return (time.tv_sec * 1000 + time.tv_usec / 1000);
+}
+
+void	ft_usleep(time_t time)
+{
+	time_t	start;
+
+	start = get_zero_time();
+	while (get_zero_time() - start < time)
+	{
+		usleep(100);
+	}
 }

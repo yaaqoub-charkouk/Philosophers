@@ -6,13 +6,13 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:16 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/01 12:58:23 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/01 19:44:27 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-void	init_semaphores(t_data *data)
+int	init_semaphores(t_data *data)
 {
 	sem_unlink("/forks");
 	sem_unlink("/print");
@@ -21,9 +21,11 @@ void	init_semaphores(t_data *data)
 	data->forks = sem_open("/forks", O_CREAT | O_EXCL,
 			0644, data->num_of_philos);
 	data->print = sem_open("/print", O_CREAT | O_EXCL, 0644, 1);
-	data->is_died = sem_open("/is_died", O_CREAT | O_EXCL, 0644, 0);
-	data->is_finished = sem_open("/is_finished", O_CREAT | O_EXCL, 0644, 0);
 	data->death_sem = sem_open("/death_sem", O_CREAT | O_EXCL, 0644, 1);
+	if (data->forks == SEM_FAILED || data->print == SEM_FAILED
+		|| data->death_sem == SEM_FAILED)
+		return (write(2, "Error sem open failed", 23), 0);
+	return (1);
 }
 
 int	init_data_struct(t_data *data, char **av)
@@ -43,7 +45,8 @@ int	init_data_struct(t_data *data, char **av)
 		|| data->time_to_eat == -1 || data->time_to_sleep == -1
 		|| data->max_eating_count_p == -1)
 		return (write(2, "Error\nInvalid argument", 22), 0);
-	init_semaphores(data);
+	if (!init_semaphores(data))
+		return (0);
 	return (1);
 }
 
