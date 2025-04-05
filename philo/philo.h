@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/01 20:22:07 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/05 15:41:34 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_data
 	time_t		time_to_die;
 	time_t		time_to_eat;
 	time_t		time_to_sleep;
-	int			max_eating_count_p;
+	long		max_eating_count_p;
 	time_t		zero_time;
 	int			is_died;
 	pthread_t	death_monitor;
@@ -65,7 +65,7 @@ void	ft_sleep(t_philo *philo);
 void	think(t_philo *philo);
 void	ft_usleep(time_t time, t_data *data);
 void	write_log(t_philo *philo, char *message);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 void	*death_monitoring(void *philos);
 void	get_set_last_eat(t_philo *philo, int flag, time_t *time, int *num_eat);
 int		get_death(t_data *data);

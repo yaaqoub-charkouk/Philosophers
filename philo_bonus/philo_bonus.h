@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 12:36:24 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/01 19:58:37 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/05 15:26:32 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	routine(t_data *data, t_philo *philo);
 void	write_log(t_data *data, size_t id, char *log);
 int		init_data_struct(t_data *data, char **av);
 int		create_philo_process(t_data *data, t_philo *philos);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 
 //time
 time_t	get_current_time(t_data	*data);
