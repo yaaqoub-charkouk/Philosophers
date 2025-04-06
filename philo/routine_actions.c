@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:42:02 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/01 20:21:39 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/06 13:31:56 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ void	take_fork(t_philo *philo)
 	write_log(philo, "has taken a fork");
 }
 
-void	eat(t_philo *philo)
+int	eat(t_philo *philo)
 {
 	int		current_eats;
 
 	get_set_last_eat(philo, 0, NULL, &current_eats);
 	if (current_eats == philo->data->max_eating_count_p)
-		return ;
+		return (0);
 	take_fork(philo);
 	write_log(philo, "is eating");
 	get_set_last_eat(philo, 1, 0, 0);
@@ -50,6 +50,7 @@ void	eat(t_philo *philo)
 	get_set_last_eat(philo, 2, 0, 0);
 	pthread_mutex_unlock(philo->left_fork);
 	pthread_mutex_unlock(philo->right_fork);
+	return (1);
 }
 
 void	ft_sleep(t_philo *philo)

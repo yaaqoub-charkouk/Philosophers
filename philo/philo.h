@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:44:18 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/06 09:55:16 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/06 13:30:59 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	*routine(void *param);
 void	clean_up(t_data *data, size_t i, int flag);
 time_t	get_current_time(t_data *data);
 time_t	get_zero_time(void);
-void	eat(t_philo *philo);
+int		eat(t_philo *philo);
 void	ft_sleep(t_philo *philo);
 void	think(t_philo *philo);
 void	ft_usleep(time_t time, t_data *data);

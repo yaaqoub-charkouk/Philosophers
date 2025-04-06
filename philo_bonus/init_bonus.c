@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 14:13:16 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/05 16:14:45 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/06 14:04:11 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	init_data_struct(t_data *data, char **av)
 		data->max_eating_count_p = -2;
 	if (data->num_of_philos == SIZE_T_MAX || data->time_to_die == -1
 		|| data->time_to_eat == -1 || data->time_to_sleep == -1
-		|| data->max_eating_count_p == -1)
+		|| data->max_eating_count_p == -1 || data->num_of_philos == 0)
 		return (write(2, "Error\nInvalid argument", 22), 0);
 	if (!init_semaphores(data))
 		return (0);
