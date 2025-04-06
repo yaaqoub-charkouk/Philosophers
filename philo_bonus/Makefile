@@ -3,8 +3,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 OBJ = init_bonus.o main_bonus.o routine_bonus.o time_bonus.o death_monitor_bonus.o ft_atoi_bonus.o
 
-bonus: all
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
