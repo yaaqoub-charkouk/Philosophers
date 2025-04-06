@@ -6,7 +6,7 @@
 /*   By: ycharkou <ycharkou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 12:00:37 by ycharkou          #+#    #+#             */
-/*   Updated: 2025/04/05 19:19:39 by ycharkou         ###   ########.fr       */
+/*   Updated: 2025/04/06 08:32:44 by ycharkou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,19 @@ void	*death_monitoring(void	*parameter)
 	t_philo	*philo;
 	time_t	last_meal;
 	int		num_eaten;
-	int		flag;
-
-	flag = 0;
+	
 	philo = (t_philo *)parameter;
 	while (1)
 	{
 		helper_set(philo, &last_meal, &num_eaten);
 		if (get_current_time(philo->data) - last_meal 
-			>= philo->data->time_to_die && !flag)
+			>= philo->data->time_to_die)
 		{
 			sem_wait(philo->data->print);
 			printf("\033[1;31m%zu %zu died\033[0m\n",
 				get_current_time(philo->data), philo->id);
 			exit(1);
 		}
-		if (num_eaten == philo->data->max_eating_count_p && philo->data->max_eating_count_p != 1)
-			flag = 1;
 		if (philo->data->max_eating_count_p != -2 
 			&& num_eaten == philo->data->max_eating_count_p
 			&& philo->id == philo->data->num_of_philos)
